@@ -1,0 +1,607 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    font-family: "Segoe UI";
+}
+
+html, body {
+    font-family: "Segoe UI";
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.yellow {
+    color: rgb(254, 225, 63);
+}
+
+/*ICONS*/
+.icons li {
+    margin-left: .5rem;
+    display: inline-block;
+}
+
+.icons a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: calc(50% + 1px);
+    transition: 300ms ease;
+    background-color: #615c6c;
+    color: #fff;
+}
+
+.icons a .icon-vk:hover {
+    background-color: #5181B8;
+    border-radius: 50%;
+}
+
+[class^="icon-vk"]:before,
+[class*=" icon-vk"]:before {
+    margin-right: .4em !important;
+}
+
+[class^="icon-instagram"]:before,
+[class*=" icon-instagram"]:before {
+    margin-right: .2em !important;
+
+}
+
+.icons a .icon-facebook:hover {
+    background-color: #385999;
+    border-radius: 50%;
+}
+
+.icons a .icon-twitter:hover {
+    background-color: #00AEEE;
+    border-radius: 50%;
+}
+
+.icons a .icon-instagram:hover {
+    background-color: #F97300;
+    border-radius: 50%;
+}
+
+.icons a .icon-gplus-1:hover {
+    background-color: #C94439;
+    border-radius: 50%;
+}
+
+/* Ссылки */
+
+a {
+    color: #f6f6f6;
+    text-decoration: none;
+    display: block;
+}
+
+a:focus {
+    outline: none;
+}
+
+/* Header */
+
+#header {
+    background: url("../images/headerBg.png") center no-repeat fixed;
+    background-size: cover;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    height: 775px;
+}
+
+#header .photoLogo {
+    width: 10%;
+}
+
+/* Main-menu */
+
+.main-menu ul {
+    position: relative;
+}
+
+.main-menu ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu ul li a {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem;
+    margin: 0;
+}
+
+.main-menu ul li a:hover::after {
+    position: absolute;
+    content: " ";
+    bottom: -1px;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background-color: rgb(254, 225, 63);
+}
+
+/*burger-menu*/
+
+#offcanvas-menu {
+    display: block;
+    position: fixed;
+    padding: 1.5rem 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: calc(100% - 48px);
+    top: 0;
+    right: calc(-100% + 48px);
+    -webkit-transition: 300ms ease;
+    -o-transition: 300ms ease;
+    transition: 300ms ease;
+    z-index: 100;
+    text-align: center;
+}
+
+#offcanvas-menu li {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+#offcanvas-menu li a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#menu-burger-button {
+    display: none;
+}
+
+#menu-burger-button + nav label {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.51);
+    width: 48px;
+    height: 48px;
+    left: -48px;
+    top: 0;
+    overflow: hidden;
+}
+
+#menu-burger-button + nav label span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 8px;
+    top: 23px;
+    -webkit-transition: 300ms ease;
+    -o-transition: 300ms ease;
+    transition: 300ms ease;
+    -webkit-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+#menu-burger-button + nav label span:first-child {
+    top: 15px;
+}
+
+#menu-burger-button + nav label span:last-child {
+    top: 31px;
+}
+
+#menu-burger-button:checked + nav label span {
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+#menu-burger-button:checked + nav label span:first-child {
+    top: 23px;
+    left: 8px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#menu-burger-button:checked + nav label span:last-child {
+    top: 23px;
+    left: 8px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#menu-burger-button:checked + nav {
+    right: 0;
+}
+
+/*HEADER-BOTTOM*/
+.header-bottom {
+    height: 625px;
+}
+
+.header-bottom h1 {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 5rem;
+    color: rgb(254, 225, 63);
+    text-transform: capitalize;
+    text-align: center;
+    margin: 2rem 0;
+}
+.header-bottom a {
+    display: block;
+    padding: .7rem 2.5rem;
+    border: 2px solid rgb(254, 225, 63);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .6);
+    color: rgb(254, 225, 63);
+    text-transform: capitalize;
+    outline: none;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 1rem;
+}
+
+.header-bottom a:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+/*advantages*/
+
+/*SLIDER DESCRIPTIONS*/
+section#services {
+    background-color: #f6f6f6;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: 775px;
+}
+
+/*SLIDER BLOCKS*/
+section#services .block {
+    border: 3px solid rgb(255, 242, 17);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    color: #000;
+    transition: 500ms ease;
+    margin: 2rem 0;
+    height: 630px
+}
+
+section#services .block:hover {
+    box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .5);
+    transform: scale(1.05, 1.05);
+    border: 3px solid rgb(254, 255, 0);
+}
+
+section#services .block img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+section#services .block h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+section#services .block p {
+    font-size: 1.3rem;
+    text-indent: .5rem;
+}
+
+section#services .block .getIt {
+    background-color: rgb(254, 225, 63);
+    color: #000 !important;
+    padding: .8rem 2rem;
+    border: 1px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    margin: 1rem 0;
+    transition: 300ms ease;
+}
+
+section#services .block:hover .getIt {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+section#services .block .getIt:hover {
+    background-color: rgb(254, 255, 0);
+}
+
+section#services .block .getIt {
+    margin: 0 !important;
+}
+
+section#services .sl .buttons button {
+    display: block;
+    padding: .5rem;
+    background-color: rgb(254, 225, 63);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #363636;
+    border: 0;
+    outline: 0;
+    margin: 0 1rem .5rem 0;
+    border-radius: 15px;
+    text-align: center;
+    transition: 500ms ease;
+}
+
+section#services .sl .buttons button:hover {
+    cursor: pointer;
+    transform: scale(1.005, 1.125);
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .5);
+}
+
+section#services .sl_slide {
+    border: 0;
+    outline: 0;
+}
+
+section#services .sl_img {
+    display: block;
+    margin: 2rem auto;
+}
+
+/*OUR TEAM*/
+
+section#ourTeam {
+    height: 775px;
+    padding: 1.5rem 1rem;
+    background-color: #FFF;
+    box-sizing: border-box;
+}
+
+section#ourTeam .teamMembers ul span {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 1px solid #363636;
+    transition: 500ms ease;
+}
+
+/*OUR PHOTOS*/
+section#ourTeam .teamMembers ul li:nth-child(1) span {
+    background: url(../images/ourPhotos/BackEnd.jpg) top no-repeat;
+    background-size: cover;
+}
+
+section#ourTeam .teamMembers ul li:nth-child(2) span {
+    background: url(../images/ourPhotos/FrontEnd.jpg) center no-repeat;
+    background-size: cover;
+}
+
+section#ourTeam .teamMembers ul.OtherPhotos li:nth-child(1) span {
+    background: url(../images/ourPhotos/SEO.jpg) center no-repeat;
+    background-size: cover;
+}
+
+section#ourTeam .teamMembers ul.OtherPhotos li:nth-child(2) span {
+    background: url(../images/ourPhotos/JS.jpg) center no-repeat;
+    background-size: cover;
+}
+
+section#ourTeam .teamMembers ul.OtherPhotos li:nth-child(3) span {
+    background: url(../images/ourPhotos/Design.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/*Описание заголовков*/
+
+section#ourTeam .mainH1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    position: relative;
+    color: #000000;
+}
+
+section#ourTeam .mainH1::after {
+    content: " ";
+    position: absolute;
+    bottom: -13px;
+    width: 150px;
+    height: 2px;
+    background-color: rgba(175, 175, 175, 0.5);
+}
+
+section#ourTeam .teamMembers ul li,
+section#ourTeam .teamMembers ul li h1,
+section#ourTeam .teamMembers ul li h2,
+section#ourTeam .teamMembers ul li i {
+    margin-top: .5rem;
+    display: block;
+    text-align: center;
+    font-size: 1.35rem;
+    transition: 300ms ease;
+}
+
+section#ourTeam .teamMembers ul li a {
+    margin: 0 1rem 1rem 1rem;
+}
+
+section#ourTeam .teamMembers ul li:hover {
+    transform: scale(1.25, 1.25);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section#ourTeam .teamMembers ul span:hover + h1 {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.selectBox {
+    margin: 0 !important;
+    position: relative;
+}
+
+.selectBox select {
+    margin: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(254, 225, 63);
+    padding: 1.3rem;
+    border: 3px solid rgb(254, 225, 63);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+    -moz-appearance: button;
+    outline: none;
+    transition: 300ms ease;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand { /* для IE */
+    display: none;
+}
+
+.selectBox select:focus {
+    outline: none;
+}
+
+.selectBox:before {
+    content: '\e800';
+    font-family: "fontello";
+    position: absolute;
+    right: 260px;
+    transform: translate(30%, 55%) !important;
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+    color: rgb(254, 225, 63);
+    pointer-events: none;
+    z-index: 100;
+}
+
+/*JOIN US SECTION*/
+section#joinUs {
+    position: relative;
+    background: url("../images/bgJoinUs.png") center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    box-shadow: inset 10000px 10000px 10000px 10000px rgba(0, 0, 0, .5);
+    padding: 1.5rem;
+    height: 775px;
+}
+
+section#joinUs h1 {
+    margin: 3rem 0;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+section#joinUs input.formEmail,
+section#joinUs input.formName {
+    margin: 1rem;
+    padding: 1.3rem;
+    outline: none;
+    font-size: 1.3rem;
+    border: 3px solid rgb(254, 225, 63);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(254, 225, 63);
+}
+
+section#joinUs input.formEmail::placeholder,
+section#joinUs input.formName::placeholder {
+    color: rgb(254, 225, 63);
+}
+
+.button {
+    padding: .7rem 1.5rem;
+    border: 2px solid rgb(254, 225, 63);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(254, 225, 63);
+    text-transform: capitalize;
+    outline: none;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 1rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+/*CONTACTS*/
+
+section#contacts {
+    height: 600px;
+    background: url("../images/contactsBG.png") center fixed;
+    background-size: cover;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+section#contacts img {
+    margin: 0 0 2rem 0;
+}
+
+section#contacts span {
+    margin-top: 1rem;
+    color: #FFF;
+    font-size: 2.1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 3.6rem;
+}
+
+section#contacts span a {
+    display: inline-block;
+    color: rgb(254, 225, 63);
+    text-decoration: underline;
+}
+
+section#contacts span a:hover {
+    text-decoration: underline;
+}
+
+/*FOOTER*/
+
+footer {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: .5rem;
+}
+
+footer img {
+    width: 8.75% !important;
+    cursor: pointer;
+    margin: 0 2rem;
+}
+
+footer .foot {
+    margin-left: 4.1rem;
+}
